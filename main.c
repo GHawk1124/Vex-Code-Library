@@ -10,7 +10,14 @@
 #include "Auton.c"
 #include "TeleOP.c"
 
+bool endAuton = false;
+
 task main() {
-	Auton();
-  startTask(teleOP);
+	while (endAuton == false) {
+		if (vexRT[Btn7U]) {
+			Auton();
+			endAuton = true;
+		}
+	}
+  teleOP();
 }

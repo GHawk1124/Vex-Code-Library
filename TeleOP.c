@@ -8,7 +8,7 @@
 
 #include "library.c"
 
-task teleOP() {
+void teleOP() {
   /*
   *  This is the loop that runs the autonomous code.
   *  Be careful editing this as it may break your code.
@@ -18,10 +18,17 @@ task teleOP() {
   *  condition inside the code that sets this value to true.
   */
   while (true) {
-    motor[LEFT1] = vexRT[Ch3];
-    motor[RIGHT1] = vexRT[Ch2];
-    motor[LEFT2] = vexRT[ch3];
-    motor[RIGHT2] = vexRT[ch3];
+    motor[LEFT1] = -vexRT[Ch3];
+    motor[RIGHT1] = -vexRT[Ch2];
+    motor[LEFT2] = -vexRT[Ch3];
+    motor[RIGHT2] = -vexRT[Ch2];
+    if (vexRT[Btn6D]) {
+      motor[extra] = MAX_FORWARD_SPEED;
+    } else if (vexRT[Btn6D]) {
+       motor[extra] = MAX_BACKWARD_SPEED;
+    } else {
+      motor[extra] = OFF;
+    }
     if (vexRT[Btn6U]) {
       motor[extra2] = MAX_FORWARD_SPEED;
     } else if (vexRT[Btn6D]) {
