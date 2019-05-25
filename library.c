@@ -1,14 +1,11 @@
-#pragma config(Motor,  port2,           LEFT1,         tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port3,           RIGHT1,        tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port4,           LEFT2,         tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port5,           RIGHT2,        tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port6,           extra,         tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port7,           extra2,        tmotorVex393_MC29, openLoop)
-#pragma config(Motor,  port8,           extra3,        tmotorVex393_MC29, openLoop)
-
 const int MAX_FORWARD_SPEED = 128.000;
 const int MAX_BACKWARD_SPEED = -127.000;
 const int OFF = 0;
+
+void wait(float seconds) {
+  float convseconds = floor(seconds * 1000.000);
+  wait10Msec(convseconds);
+}
 
 void moveForward(float speed, int numSeconds) {
   int convspeed = OFF;
@@ -64,11 +61,6 @@ void moveRight(float speed, int numSeconds) {
   motor[port3] = 0;
   motor[port4] = 0;
   motor[port5] = 0;
-}
-
-void wait(float seconds) {
-  float convseconds = floor(seconds * 1000.000);
-  wait10Msec(convseconds);
 }
 
 void RunExtra() {

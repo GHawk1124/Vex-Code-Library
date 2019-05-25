@@ -6,18 +6,22 @@
 #pragma config(Motor,  port7,           extra2,        tmotorVex393_MC29, openLoop)
 #pragma config(Motor,  port8,           extra3,        tmotorVex393_MC29, openLoop)
 
-#include "library.c"
 #include "Auton.c"
 #include "TeleOP.c"
 
 bool endAuton = false;
 
+/* Main Compiled Program for the Robot */
+
 task main() {
+
 	while (endAuton == false) {
 		if (vexRT[Btn7U]) {
 			Auton();
 			endAuton = true;
 		}
 	}
+
   teleOP();
+
 }
