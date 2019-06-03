@@ -1,6 +1,10 @@
 # Vex-Code-Library
 Code Library for Vex Summer camp at Red Mountain Robotics 6/3/19 - 6/8/19
 
+Link in case anything is missing - https://github.com/GHawk1124/Vex-Code-Library.git
+
+Github Page - https://github.com/GHawk1124/Vex-Code-Library
+
 This library will allow for easy programming for an Autonomous and Driver Control situation without limiting its capabilities.
 
 README - Make sure the file you compile to your robot is the "main.c" file to make sure all the dependencies are included. If you wish,

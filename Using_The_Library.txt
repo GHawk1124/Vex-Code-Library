@@ -1,0 +1,51 @@
+/*
+ * Function:  wait
+ * --------------------
+ * Waits a time in seconds
+ *  float: Seconds - regular seconds
+ *  Waits the number of seconds inputed to the function
+ */
+ 
+ /*
+ * Function:  moveForward
+ * --------------------
+ * Moves the robot forward given a time and speed
+ *  float: speed - percentage of max speed of motors
+ *  float: numSeconds - time in seconds to move the bot
+ */
+
+ /*
+ * Function:  moveBackward
+ * --------------------
+ * Moves the robot Backward given a time and speed
+ *  float: speed - percentage of max speed of motors
+ *  float: numSeconds - time in seconds to move the bot
+ */
+
+ /*
+ * Function:  moveLeft
+ * --------------------
+ * Turns the robot Left given a time and speed
+ *  float: speed - percentage of max speed of motors
+ *  float: numSeconds - time in seconds to move the bot
+ */
+
+ /*
+ * Function:  moveRight
+ * --------------------
+ * Turns the Right forward given a time and speed
+ *  float: speed - percentage of max speed of motors
+ *  float: numSeconds - time in seconds to move the bot
+ */
+
+ /*
+ * Function:  RunExtra
+ * --------------------
+ * Runs motor "extra" clockwise
+ */
+
+ /*
+ * Function:  nRunExtra
+ * --------------------
+ * Runs motor "extra" counter-clockwise
+ */
