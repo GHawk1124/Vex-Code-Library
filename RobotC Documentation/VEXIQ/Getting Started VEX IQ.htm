@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0058)http://www.robotc.net/wiki/Getting_Started_with_the_VEX_IQ -->
+<html lang="en" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Getting Started with the VEX IQ</title>
+<meta charset="UTF-8">
+<meta name="generator" content="MediaWiki 1.18.0">
+<link rel="shortcut icon" href="http://www.robotc.net/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.robotc.net/w/opensearch_desc.php" title="ROBOTC API Guide (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://www.robotc.net/w/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="ROBOTC API Guide Atom feed" href="http://www.robotc.net/w/index.php?title=Special:RecentChanges&feed=atom">
+<link rel="stylesheet" href="screen.css">
+<style type="text/css" media="all">.mw-collapsible-toggle{float:right} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+
+/* cache key: robotc7_wiki:resourceloader:filter:minify-css:4:4250852ed2349a0d4d0fc6509a3e7d4c */
+</style><style type="text/css" media="all">.js-messagebox{margin:1em 5%;padding:0.5em 2.5%;border:1px solid #ccc;background-color:#fcfcfc;font-size:0.8em}.js-messagebox .js-messagebox-group{margin:1px;padding:0.5em 2.5%;border-bottom:1px solid #ddd}.js-messagebox .js-messagebox-group:last-child{border-bottom:thin none transparent}
+
+/* cache key: robotc7_wiki:resourceloader:filter:minify-css:4:8b08bdc91c52a9ffba396dccfb5b473c */
+</style><style type="text/css" media="all">.suggestions{overflow:hidden;position:absolute;top:0px;left:0px;width:0px;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:Window;font-size:0.8em;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;background-color:Window;font-size:0.8em;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;color:WindowText;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left}.suggestions-result-current{background-color:#4C59A6;background-color:Highlight;color:white;color:HighlightText}.suggestions-special .special-label{font-size:0.8em;color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white;color:HighlightText}.autoellipsis-matched,.highlight{font-weight:bold}
+
+/* cache key: robotc7_wiki:resourceloader:filter:minify-css:4:1421bbe1922a44daa3fbb100d858b3d8 */
+</style><style type="text/css" media="all">#mw-panel.collapsible-nav div.portal{background-image:url(data:text/plain;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAABCAMAAAA7MLYKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEtQTFRF29vb2tra4ODg6urq5OTk4uLi6+vr7e3t7Ozs8PDw5+fn4+Pj4eHh3d3d39/f6Ojo5eXl6enp8fHx8/Pz8vLy7+/v3Nzc2dnZ2NjYnErj7QAAAD1JREFUeNq0wQUBACAMALDj7hf6JyUFGxzEnYhC9GaNPG1xVffGDErk/iCigLl1XV2xM49lfAxEaSM+AQYA9HMKuv4liFQAAAAASUVORK5CYII=);background-image:url(http://www.robotc.net/w/extensions/Vector/modules/images/portal-break.png?2011-12-05T15:15:00Z)!ie;background-position:left top;background-repeat:no-repeat;padding:0.25em 0 !important;margin:-11px 9px 10px 11px}#mw-panel.collapsible-nav div.portal h5{color:#4D4D4D;font-weight:normal;background:url(data:text/plain;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRFeXl53d3dmpqasbGx////GU0iEgAAAAV0Uk5T/////wD7tg5TAAAAK0lEQVQI12NwgQIG0hhCDAwMTCJAhqMCA4MiWEoIJABiOCooQhULi5BqMgB2bh4svs8t+QAAAABJRU5ErkJggg==) left center no-repeat;background:url(http://www.robotc.net/w/extensions/Vector/modules/images/open.png?2011-12-05T15:15:00Z) left center no-repeat!ie;padding:4px 0 3px 1.5em;margin-bottom:0px}#mw-panel.collapsible-nav div.collapsed h5{color:#0645AD;background:url(data:text/plain;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAxQTFRF3d3deXl5////nZ2dQA6SoAAAAAN0Uk5T//8A18oNQQAAADNJREFUeNpiYEIDDMQKMKALMDOgCTDCRWACcBG4AEwEIcDITEAFuhnotmC4g4EEzwEEGAADqgHmQSPJKgAAAABJRU5ErkJggg==) left center no-repeat;background:url(http://www.robotc.net/w/extensions/Vector/modules/images/closed-ltr.png?2011-12-05T15:15:00Z) left center no-repeat!ie;margin-bottom:0px}#mw-panel.collapsible-nav div h5:hover{cursor:pointer;text-decoration:none}#mw-panel.collapsible-nav div.collapsed h5:hover{text-decoration:underline}#mw-panel.collapsible-nav div.portal div.body{background:none !important;padding-top:0px;display:none}#mw-panel.collapsible-nav div.persistent div.body{display:block}#mw-panel.collapsible-nav div.first h5{display:none}#mw-panel.collapsible-nav div.persistent h5{background:none !important;padding-left:0.7em;cursor:default}#mw-panel.collapsible-nav div.portal div.body ul li{padding:0.25em 0}#mw-panel.collapsible-nav div.first{background-image:none;margin-top:0px}#mw-panel.collapsible-nav div.persistent div.body{margin-left:0.5em}
+
+/* cache key: robotc7_wiki:resourceloader:filter:minify-css:4:0b7acf201958b233602753aa04c08d6c */
+</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="http://www.robotc.net/w/load.php?debug=false&lang=en&modules=site&only=styles&skin=vector&*">
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: robotc7_wiki:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="./images_vexiq/load.php"></script><script src="./images_vexiq/load(1).php"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Getting_Started_with_the_VEX_IQ", "wgTitle": "Getting Started with the VEX IQ", "wgCurRevisionId": 7312, "wgArticleId": 1623, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": [], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgWikiEditorEnabledModules": {"toolbar": false, "dialogs": false, "hidesig": true, "templateEditor": false, "templates": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": false, "editwarning": false, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}, "Geo": {"city": "", "country": ""}, "wgNoticeProject": "wikipedia"});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script><script type="text/javascript" src="./images_vexiq/load(2).php"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Getting_Started_with_the_VEX_IQ action-view skin-vector"><!-- content -->
+		<div id="content"><!-- sitenotice -->
+			<div id="siteNotice"><!-- centralNotice loads here --><script type="text/javascript">
+/* <![CDATA[ */
+
+/* ]]> */
+</script><div id="localNotice" lang="en" dir="ltr"><div style="HEIGHT: 65px; RIGHT: 20px; POSITION: relative; TOP: 0px; WIDTH: 100%">
+  <div style="POSITION: absolute; LEFT: 20px"><div class="floatleft"><a href="http://www.robotc.net/wiki/" title="ROBOTC"><IMG alt=ROBOTC src="./images_vexiq/Robotc_textual_logo.png" width=327 height=65></a></div></div>
+</div>
+</div>
+</div><!-- /sitenotice --><!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Getting Started with the VEX IQ</h1><!-- /firstHeading --><!-- bodyContent -->
+			<div id="bodyContent">
+<P>&nbsp;</P>
+<P>The VEX IQ is a fully programmable device that enables users to incorporate 
+motors, sensors, an LCD screen, and a remote control system all in one robot. 
+Inside of the Cortex, there is a single processor that handles the program 
+execution and the passing of commands to input and output devices. </P>
+				<div lang="en" dir="ltr" class="mw-content-ltr">
+<p>The VEX IQ Robot Brain can be connected directly to a computer using a micro-USB cable. It can also connect to a VEX IQ Controller either by being directly tethered via a standard ethernet cable, or wirelessly using the 900Mhz Radio Modules. When setting up an IQ Robot Brain for the first time, you will want to ensure the 'VEX IQ Firmware Update' program is run at least once to ensure that the firmware on the Robot Brain and all attached devices are up to date. Once that is completed, it is a simple matter of downloading the ROBOTC firmware to the IQ Robot Brain in order to get it working with ROBOTC. 
+</p>
+<p><br>
+</p>
+<table id="toc" class="toc"><tbody><tr><td><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Configuring_the_VEX_IQ_for_use_with_ROBOTC"><span class="tocnumber">1</span> <span class="toctext">Configuring the VEX IQ for use with ROBOTC</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Note:_Driver_Installation"><span class="tocnumber">1.1</span> <span class="toctext">Note: Driver Installation</span></a>
+<li class="toclevel-2 tocsection-3"><a href="#Step_1:_Connect_the_IQ_to_your_PC"><span class="tocnumber">1.2</span> <span class="toctext">Step 1: Connect the IQ to your PC</span></a>
+<li class="toclevel-2 tocsection-4"><a href="#Step_2:_Platform_Type_and_Communication_Port"><span class="tocnumber">1.3</span> <span class="toctext">Step 2: Platform Type and Communication Port</span></a>
+<li class="toclevel-2 tocsection-5"><a href="#Step_3:_Updating_VEX_IQ_Firmware"><span class="tocnumber">1.4</span> <span class="toctext">Step 3: Updating VEX IQ Firmware</span></a>
+<li class="toclevel-2 tocsection-6"><a href="#Step_4:_Downloading_and_Running_Code"><span class="tocnumber">1.5</span> <span class="toctext">Step 4: Downloading and Running Code</span></a>
+<li class="toclevel-2 tocsection-7"><a href="#Step_5:_Running_the_Program"><span class="tocnumber">1.6</span> <span class="toctext">Step 5: Running the Program</span></a>
+<li class="toclevel-2 tocsection-8"><a href="#Step_5:_Getting_More_Help"><span class="tocnumber">1.7</span> <span class="toctext">Step 5: Getting More Help</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></tbody></table>
+<p><br>
+</p>
+<h2> <span class="mw-headline" id="Configuring_the_VEX_IQ_for_use_with_ROBOTC"> Configuring the VEX IQ for use with ROBOTC </span></h2>
+<table width="740">
+
+<tbody><tr>
+<td>This is a guide for setting up a VEX IQ Robot Brain using the micro-USB cable. These steps are required the first time you use your computer to program a specific VEX IQ, or after you've updated ROBOTC to the latest version. Once you've successfully completed these steps, you will be able to download and run ROBOTC programs on the VEX IQ Robot Brain. <b>Note: Administrative privileges are required for some of these steps.</b>
+</td></tr></tbody></table>
+<h3> <span class="mw-headline" id="Note:_Driver_Installation"> Note: Driver Installation </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>Drivers for the VEX IQ are installed automatically when the <a rel="nofollow" target="_blank" class="external text" href="http://www.vexrobotics.com/vexiq/firmware">VEX IQ Firmware Updater</a> is installed. Because of this, the VEX IQ files are not automatically downloaded when ROBOTC is installed. If needed, the VEX IQ Firmware Updater can be downloaded directly from VEX's website: <a rel="nofollow" target="_blank" class="external free" href="http://www.vexrobotics.com/vexiq/firmware">http://www.vexrobotics.com/vexiq/firmware</a>. <br>
+</td></tr>
+</tbody></table>
+<h3> <span class="mw-headline" id="Step_1:_Connect_the_IQ_to_your_PC"> Step 1: Connect the IQ to your PC </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>Connect the VEX IQ Robot Brain directly to a USB port on your computer using the micro-USB cable. Once the IQ is connected to the computer, turn it on by pressing the check button. You may need wait a few seconds while Windows recognizes the new device and installs the driver for the IQ Robot Brain.<br>
+<p><IMG alt="IQ Installing Driver.png" src="./images_vexiq/IQ_Installing_Driver.png" width=305 height=98><br>
+</p>
+</td></tr>
+</tbody></table>
+<h3> <span class="mw-headline" id="Step_2:_Platform_Type_and_Communication_Port"> Step 2: Platform Type and Communication Port </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>The next step is to specify that a VEX IQ Robot Brain will be used and to determine which Windows COM port it is plugged into. Go to Robot → Platform Type → Innovation First (IFI) and select "<b>VEX IQ</b>" or "<b>Natural Language (VEX IQ)</b>".<br>
+<p><IMG alt="IQ Installing PlatformType.png" src="./images_vexiq/IQ_Installing_PlatformType.png" width=519 height=340><br>
+<i>Note: You should choose "<b>VEX IQ</b>" if you plan on programming using the standard text-based ROBOTC language. Choose "<b>Natural Language (VEX IQ)</b>" if you want to take advantage of the Natural Language commands and interface in ROBOTC.</i><br>
+<br>
+</p>
+</td></tr>
+<tr>
+<td>Next, navigate to the View menu and choose Select Communication Port.<br>
+<p><IMG alt="Comm port.png" src="./images_vexiq/Comm_port.png" width=243 height=260><br>
+<br>
+</p>
+</td></tr>
+<tr>
+<td>The 'Select Communications Port for Platforms' window will appear. From the Communications Port drop down list, you should see an "Automatic Selection" option and another "COMX (VEX USB Serial Port)" option. <br>
+<p>Generally, it is better to select the "Automatic Selection" option as this will allow ROBOTC to automatically connect to a VEX IQ Robot Brain that is connected to the computer. However, if the "Automatic Selection" option is not working you may need to manually select the IQ's COM port by selecting the "COMX (VEX USB Serial Port)" option.
+</p><p><IMG alt="IQ Install CommPort.png" src="./images_vexiq/IQ_Install_CommPort.png" width=821 height=425>
+<br> 
+</p><p><i><b>Important:</b> If the  "Vex USB Serial Port" option does not appear in the drop down menu when a VEX IQ is connected to the computer, this may indicate that Windows has not recognized the device or access to it is blocked. Ensure that the VEX IQ Device Driver was successfully installed with Administrative Privileges, disconnect and reconnect your IQ from the computer, and press "Refresh List" to force ROBOTC to repopulate the list.</i>
+</p>
+</td></tr></tbody></table>
+<h3> <span class="mw-headline" id="Step_3:_Updating_VEX_IQ_Firmware"> Step 3: Updating VEX IQ Firmware </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>Navigate to Robot → Download Firmware and select the "Standard File" option. This will start the firmware download process.<br>
+<p><IMG alt="IQ Install Firmware1.png" src="./images_vexiq/IQ_Install_Firmware1.png" width=535 height=351><br><br>
+</p>
+</td></tr>
+<tr>
+<td>A Download Progress window will appear, showing the progress of the ROBOTC Firmware download.<br>
+<p><IMG alt="IQ Install Firmware2.png" src="./images_vexiq/IQ_Install_Firmware2.png" width=547 height=147><br><br>
+</p>
+</td></tr>
+<tr>
+<td>When the download reaches 100%, the process will be complete and the firmware download windows will automatically close.<br><br>
+</td></tr>
+<tr>
+<td><i><b>Notes:</b></i>
+<p>Once this step is complete, you should no longer need Administrative privileges on your computer; you should be able to download Master CPU Firmware, ROBOTC firmware, and ROBOTC programs in a permissions-restricted account. Only future updates to ROBOTC and the VEX Cortex Device Driver will require Administrative privileges. Exception: On some computers, Windows may prompt you to "install new hardware" each time the Cortex is plugged in on a different USB port. To alleviate the issue, connect the updated VEX Cortex on each USB port as an administrator (no need to redownload firmware), or dedicate one USB port for communication with the VEX Cortex.
+</p><p><b>You only need to download the Firmware once</b>, when you first start using a VEX IQwith ROBOTC, or when you upgrade to a newer version of ROBOTC. You do not need to re-download the firmware every time you want to download code. If the download fails, disconnect the VEX IQ from your computer and turn it off. Then reconnect it to the computer, allow a few seconds to ensure that Windows recognizes it, turn it on, and try downloading the firmware again.
+</p>
+</td></tr></tbody></table>
+<h3> <span class="mw-headline" id="Step_4:_Downloading_and_Running_Code"> Step 4: Downloading and Running Code </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>ROBOTC contains a large library of sample programs to help you get started. These sample programs can be downloaded to your VEX IQ using the micro-USB cable.<br>
+<p><br>
+The VEX IQ Controller Mode controls which 'mode' directory the program is downloaded to (TeleOp (for remote control) or Autonomous (for autonomous)). The TeleOp option utilizes the VEX IQ Controller to allow remote control of the robot, while the Autonomous option allows for fully autonomous programming.<br> 
+</p><p><b>Note</b> that the TeleOp option requires the IQ Controller to be connected to the Robot Brain either wirelessly (using the 900MHz Radio Modules) or hardwired (using an ethernet cable plugged into the 'Tether' ports) in order for the program to operate; the Autonomous option will execute the program regardless of whether or not a IQ Controller is connected to the IQ Robot Brain.
+<br>
+<IMG alt="IQ Install ControllerMode.png" src="./images_vexiq/IQ_Install_ControllerMode.png" width=525 height=150><br>
+</p>
+</td></tr>
+<tr>
+<td>To open a sample program, go to File → Open Sample Program.<br>
+<p><IMG alt="IQ Install SampleProg Open.png" src="./images_vexiq/IQ_Install_SampleProg_Open.png" width=280 height=136><br>
+</p>
+</td></tr>
+<tr>
+<td>Navigate to the Basic Movement folder and open "Moving Forward.c".<br>
+<p><IMG alt="IQ Install SampleProg MoveForw.png" src="./images_vexiq/IQ_Install_SampleProg_MoveForw.png" width=531 height=189><br>
+</p>
+</td></tr>
+<tr>
+<td>Make sure that your robot is connected to the computer and turned ON. Then go to Robot → Compile and Download Program.<br>
+<p><IMG alt="IQ Install SampleProg Compile.png" src="./images_vexiq/IQ_Install_SampleProg_Compile.png" width=390 height=118><br>
+</p>
+</td></tr>
+</tbody></table>
+<p><br>
+</p>
+<h3> <span class="mw-headline" id="Step_5:_Running_the_Program"> Step 5: Running the Program </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>There are two main ways programs can be run from the IQ Robot Brain.<br>
+<ul><li> <b>1)</b> Through the 
+        Program Debug Window in ROBOTC<li> <b>2)</b> Through the IQ Brain's LCD Screen (manually)
+</li></ul>
+<p><br>
+</p>
+</td></tr>
+<tr>
+<td><b>1)</b> The first option is to use the Program Debug window that appears when a program is downloaded to the VEX IQ Brain. You can use the Program Debug Window to manually Start, Stop, Suspend, and Step through code. <br>
+</td></tr>
+<tr>
+<td><IMG alt="Lego Debug Window.png" src="./images_vexiq/Lego_Debug_Window.png" width=323 height=168><br><br>
+</td></tr>
+<tr>
+<td><b>2)</b> The second option is to use the VEX IQ Robot Brain's LCD and navigation buttons to select and start a program manually. The program's 'VEX IQ Controller Mode' setting (TeleOp or Autonomous) will determine where the program is stored on the IQ brain. Navigate to the program in the IQ Robot Brain and use the check button to manually start the program. <br>
+</td></tr>
+<tr>
+<td><IMG alt="IQ Install RemoteScreen.png" src="./images_vexiq/IQ_Install_RemoteScreen.png" width=520 height=412><br><br>
+</td></tr>
+</tbody></table>
+<p><br>
+</p>
+<h3> <span class="mw-headline" id="Step_5:_Getting_More_Help"> Step 6: Getting More Help </span></h3>
+<table width="740">
+
+<tbody><tr>
+<td>ROBOTC includes a useful Help system. You can launch the help system by going to the <b>Help</b> menu and selecting <b>Open Help</b>, or by pressing the <b>F1</b> key on your keyboard.<br>
+<p><IMG alt=Vex2-getting-started-help.png src="./images_vexiq/Vex2-getting-started-help.png" width=420 height=260><br>
+<br>
+</p>
+</td></tr>
+<tr>
+<td>Additional help and support can be found at <a rel="nofollow" target="_blank" class="external free" href="http://www.robotc.net/support">http://www.robotc.net/support</a> or by e-mailing support@robotc.net
+</td></tr>
+</tbody></table>
+<p><br>
+</p><!-- 
+NewPP limit report
+Preprocessor node count: 83/1000000
+Post-expand include size: 8/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+--><!-- Saved in parser cache with key robotc7_wiki:pcache:idhash:1623-0!*!*!!en!2!* and timestamp 20130903195907 -->
+</div><!-- /bodycontent --><!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://www.robotc.net/w/index.php?title=Getting_Started_with_the_VEX_IQ&amp;oldid=7312">http://www.robotc.net/w/index.php?title=Getting_Started_with_the_VEX_IQ&amp;oldid=7312</a>"				</div><!-- /printfooter --><!-- catlinks -->
+				<div id="catlinks" class="catlinks catlinks-allhidden"></div><!-- /catlinks -->
+												<div class="visualClear"></div><!-- debughtml --><!-- /debughtml -->
+			</div><!-- /bodyContent -->
+		</div><!-- /content --><!-- header --><!-- /header --><!-- panel --><!-- /panel --><!-- footer --><!-- /footer --><!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+<!-- /fixalpha -->
+		<script src="./images_vexiq/load(3).php"></script>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax", "ext.vector.collapsibleNav", "ext.vector.simpleSearch"]);
+}
+</script><script type="text/javascript" src="./images_vexiq/load(4).php"></script><script type="text/javascript" src="./images_vexiq/load(5).php"></script>
+<script src="./images_vexiq/index.php"></script>
+<script src="./images_vexiq/load(6).php"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"vector-simplesearch":1,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: robotc7_wiki:resourceloader:filter:minify-js:4:992d62f96f98047898e885934c9c6ac2 */
+}
+</script><script src="./images_vexiq/saved_resource"></script>
+<!-- Served in 0.160 secs. --><div id="hiddenlpsubmitdiv" style="DISPLAY: none"></div><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

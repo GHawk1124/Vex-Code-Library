@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Getting Started</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style2.css" media="screen" />
+<style type="text/css">
+<!--
+.red {
+	color: #900;
+}
+-->
+</style>
+</head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1>Getting Started with<strong> ROBOT<span class="red">C </span></strong>- Wireless Connection Steps</h1>
+</div>
+
+
+<div class="left"> 
+<div class="articles">
+  <div class="articles">
+    <p>This  is a guide for configuring the VEX Cortex system to be programmed wirelessly using a VEXnet connection. These steps are required the first time you use your computer to program a specific VEX Cortex, or after you've upated ROBOTC to the latest verstion. Once you've successfully completed these steps you can
+      download your own programs without revisiting them. <strong>Note: Administrative privileges are required for some of these steps.</strong></p>
+    <p></p>
+<p>&nbsp;</p>
+    <p><a href="Getting Started VEX.htm">&lt;&lt; Back to Main Page</a></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <h2><br />
+Note: Driver Installation</h2>
+  <div class="articles">
+    <p>ROBOTC 3.05 and later automatically installs the necessary drivers for the VEX Cortex, VEXnet Joysticks, and USB-to-Serial Programming cable. If you need to download the drivers for troubleshooting purposes, you can still find them at <a href="http://www.robotc.net/download/cortex/" target="_blank">www.ROBOTC.net/download/cortex.<br />
+    </a><img src="images/both_drivers.png" alt="" width="458" height="155" /></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <h2><br />
+    Step 1: Connect the Cortex to your PC</h2>
+  <div class="articles">
+    <p>Connect the VEX Cortex directly to a USB port on your computer using the USB A-to-A cable. Allow a few seconds for Windows to recognize the device.</p>
+    <p><img src="3_5_images/connect.JPG" alt="" width="600" height="450" /></p>
+    <p>&nbsp;</p>
+    <p>Connect a 7.2V Robot battery to the Cortex and move the POWER switch to the ON position. Optionally, you can connect two motors to MOTOR Ports 2 and 3 for testing a sample program later in the sequence. You can connect 3-wire motors directly, or the newer 2-wire motors using Motor Controller 29 cables.</p>
+    <p><img src="3_5_images/battery_motors.JPG" alt="" width="600" height="450" /></p>
+    <p>Note: Technically, the battery is not necessary for downloading Master CPU Firmware and ROBOTC Firmware, but it has helped in cases where the USB ports on the computer provide too little power to facilitate a reliable connection to the Cortex.</p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2>Step 2: Platform Type and Communication Port</h2>
+  <div class="articles">
+    <p>Specify that you are using the Cortex and how it is connected to your computer in ROBOTC. Go to Robot &gt; Platform Type &gt; Innovation First (IFI) and select &quot;<strong>VEX 2.0 Cortex</strong>&quot; or &quot;<strong>Natural Language (VEX Cortex)</strong>&quot;.</p>
+    <p><img src="3_5_images/Screenshot-2012-01-06_12.39.36.png" alt="" width="652" height="327" /></p>
+    <p>Note: You should choose &quot;<strong>VEX 2.0 Cortex</strong>&quot; if you plan on programming using the standard ROBOTC language. Choose &quot;<strong>Natural Language (VEX Cortex)</strong>&quot; if you want to take advantage of the Natural Language commands in ROBOTC.</p>
+    <p>&nbsp;</p>
+    <p>Then go to View and choose Select Communication Port.</p>
+    <p><img src="images/comm port.png" alt="" width="243" height="260" /></p>
+    <p>&nbsp;</p>
+    <p>The Select Communications Port for Platforms window  will appear. From the Communications Port drop down list, you should see  &quot;Automatic Selection&quot; and one of two additional options: </p>
+    <p>If your VEX Cortex is in &quot;bootload mode&quot; or running an older (2.x) version of the Master CPU Firmware, it will appear as a &quot;USB Wired Cable&quot; option in the list.</p>
+    <p><img src="images/comm port select.png" alt="" width="536" height="261" /></p>
+    <p>&nbsp;</p>
+    <p>If your VEX Cortex is running a newer (3.x) version of the Master CPU Firmware, it will appear as a &quot;Vex Robotics Comm Port&quot; in the list.</p>
+    <p><img src="3_5_images/Screenshot-2012-01-06_12.44.29.png" alt="" width="536" height="261" /></p>
+    <p>Make sure that &quot;Automatic Selection&quot; or one of the two legitimate options is selected. If  you ever plan on programming your robot wirelessly over VEXnet, choosing &quot;Automatic Selection&quot;  is recommended. Press OK to save your choice. </p>
+    <p>&nbsp;</p>
+    <p>Important: If the &quot;USB Wired Cable&quot; or &quot;Vex Robotics Comm Port&quot; options do not appear in the drop down menu when a VEX Cortex is connected, this may indicate that Windows has not recognized the device or access to it is blocked. Ensure that the VEX Cortex Device Driver was successfully installed with Administrative Privileges, disconnect and reconnect your Cortex from the computer, and press &quot;Refresh List&quot; to force ROBOTC to repopulate the list. <br />
+    </p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <h2><br />
+    Step 3: Updating VEX Cortex Firmware</h2>
+  <div class="articles">
+    <p>Go to Robot &gt; Download Firmware  and select &quot;Automatically Update VEX Cortex&quot;.</p>
+    <p><img src="3_5_images/Screenshot-2012-01-06_12.58.27.png" alt="" width="527" height="329" /></p>
+    <p>&nbsp;</p>
+    <p>A message will appear, informing you that the software will update your Cortex to the latest Master CPU and ROBOTC Firmware files. Press OK to begin the process.</p>
+    <p><img src="3_5_images/ROBOTC_Message-2012-01-06_12.58.37.png" alt="" width="417" height="178" /></p>
+    <p>&nbsp;</p>
+    <p>A Download Progress window will appear, showing the progress of the Master CPU Firmware download. </p>
+    <p><img src="3_5_images/Download_Progress-2012-01-06_12.59.09.png" alt="" width="535" height="132" /></p>
+    <p>&nbsp;</p>
+    <p>When the Master CPU Firmware download is complete, a ROBOTC Message will appear and inform you that it will now update the ROBOTC firmware, if needed. Press OK to continue the process.</p>
+    <p><img src="3_5_images/ROBOTC_Message-2012-01-06_12.59.37.png" alt="" width="408" height="165" /></p>
+    <p>&nbsp;</p>
+    <p>Note: If this is the first time a VEX Cortex running the 3.x Master CPU Firmware has been connected to your computer, Windows will recognize it as  a new device, and  may prompt you to verify the new hardware installation. Press Continue or Continue Anyway to complete the installation.</p>
+    <p><img src="images/found new hardware 4.png" alt="" width="556" height="419" /></p>
+    <p>&nbsp;</p>
+    <p>If your ROBOTC Firmware is out-of-date, another Download Progress window will appear and begin the ROBOTC Firmware download. </p>
+    <p><img src="3_5_images/Download_Progress-2012-01-06_13.00.34.png" alt="" width="535" height="132" /></p>
+    <p>&nbsp;</p>
+    <p>When the download completes, another ROBOTC Message will appear. Press OK to complete the process.</p>
+    <p><img src="3_5_images/ROBOTC_Message-2012-01-06_13.00.00.png" alt="" width="374" height="145" /></p>
+    <p>&nbsp;</p>
+    <p>Notes: </p>
+    <p>On some computers, Windows may prompt you to &quot;install new hardware&quot; each time the Cortex is plugged in on a different USB port. To alleviate the issue, connect the updated VEX Cortex on each USB port as an administrator (no need to redownload firmware), or dedicate one USB port for communication with the VEX Cortex.</p>
+    <p><strong>You only need to download the  Firmware once</strong>, when you first start using a VEX Cortex with ROBOTC, or when you upgrade to a newer version of ROBOTC. You do not need to re-download the  firmware every time you want to download code. If the download fails, disconnect the VEX Cortex from your computer and turn it off. Then reconnect it to the computer, allow a few seconds to ensure that Windows recognizes it, turn it on, and try downloading the  firmware again. </p>
+    <p>If you are having trouble with the Automatic Firmware Download, you can <a href="vex_wired_manual.htm">follow these steps to manually download the firmware</a>.</p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <div class="articles">
+  </div>
+  <p>&nbsp;</p>
+  <div class="articles"></div>
+  <h2>Step 4: Connect the VEXnet Joysticks to your PC</h2>
+  <div class="articles">
+    <p>Connect the VEXnet Joystick directly to a USB port on your computer using the USB A-to-A cable. Allow a few seconds for Windows to recognize the device.</p>
+    <p><img src="images/joy 01.JPG" alt="" width="529" height="397" /></p>
+    <p>Note: Technically, batteries are not necessary for downloading VEXnet Joystick Firmware, but it has helped in cases where the USB ports on the computer provide too little power to facilitate a reliable connection.</p>
+    <p>&nbsp;</p>
+    <p><img src="images/joy 03.JPG" alt="" width="529" height="397" /></p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <h2><br />
+    Step 5: Updating VEXnet Joystick Firmware</h2>
+  <div class="articles">
+    <p>Like the VEX Cortex, the VEXnet Joysticks contain a microprocessor and software that allows them to create and maintain a VEXnet link. Updating the Firmware on the VEXnet Joysticks will ensure that it has the latest and most reliable software. </p>
+    <p>&nbsp;</p>
+<p>Go to Robot &gt; Download Firmware and select &quot;Automatically Update VEXnet Joystick&quot; to download the latest VEXnet Joystick Firmware to the controller.</p>
+    <p><img src="3_5_images/Screenshot-2012-01-06_13.34.56.png" alt="" width="524" height="327" /></p>
+    <p>&nbsp;</p>
+    <p>A message will appear, informing you that the software will update your VEXnet Joystick to the latest firmware version. Press OK to begin the process.</p>
+    <p><img src="3_5_images/ROBOTC_Message-2012-01-06_13.36.45.png" alt="" width="390" height="178" /></p>
+    <p>&nbsp;</p>
+    <p>A Download Progress window will appear, showing the progress of the VEXnet Joystick Firmware download. </p>
+    <p><img src="3_5_images/Download_Progress-2012-01-06_12.59.09.png" alt="" width="535" height="132" /></p>
+    <p>&nbsp;</p>
+    <p>Notes: </p>
+    <p><strong>You only need to download the VEXnet Joystick Firmware once</strong>, when you first start using it with ROBOTC, or when you upgrade to a newer version of ROBOTC. </p>
+    <p>If the VEXnet Joysticks were previously linked with a VEX Cortex, that information was cleared during the firmware download. The VEXnet Joysticks must be re-linked with the desired VEX Cortex.</p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <br />
+  <h2>Step 6: Create a VEXnet Link between the VEX Cortex and VEXnet Joystick</h2>
+  <div class="articles">
+    <p>Begin by verifying that both the Cortex and VEXnet Joystick are connected to charged batteries. Connect a 7.2V robot battery to the Cortex, but do <strong>not</strong> power it ON.</p>
+    <p><img src="images/sync 01.jpg" alt="" width="526" height="394" /></p>
+    <p>&nbsp;</p>
+    <p>Remove the battery cover plate on the VEXnet Joystick. Install 6 AAA batteries, and replace the
+      battery cover plate. Do <strong>not</strong> power the VEXnet Joystick ON.</p>
+    <p><img src="images/sync 02.jpg" alt="" width="526" height="395" /></p>
+    <p>&nbsp;</p>
+    <p>Tether the USB port on the VEXnet Joystick to the USB port on the Cortex using a USB
+      A-to-A cable. Plug one end of the USB A-to-A cable into
+      the USB port on the VEXnet Joystick.</p>
+    <p><img src="images/sync 03.jpg" alt="" width="526" height="394" /></p>
+    <p>&nbsp;</p>
+    <p>Plug the other end of the USB A-to-A cable
+      into the USB port on the VEX Cortex.</p>
+    <p><img src="images/sync 04.jpg" alt="" width="526" height="395" /><br />
+    </p>
+    <p>&nbsp;</p>
+    <p>Power the Cortex ON. </p>
+    <p><img src="images/sync 05.jpg" alt="" width="526" height="395" /></p>
+    <p>&nbsp;</p>
+    <p>After a few seconds, ROBOT and VEXnet LED's will blink green,
+      indicating that the Cortex and VEXnet Joystick have successfully paired.</p>
+    <p><img src="images/sync 05b.jpg" alt="" width="526" height="394" /></p>
+    <p>&nbsp;</p>
+    <p>Turn the Cortex OFF.</p>
+    <p><img src="images/sync 06.jpg" alt="" width="526" height="395" /></p>
+    <p>&nbsp;</p>
+    <p>Remove the USB A-to-A cable from the VEXnet Joystick and Cortex. </p>
+    <p><img src="images/sync 07.jpg" alt="" width="526" height="395" /></p>
+    <p>&nbsp;</p>
+    <p>Insert VEXnet USB Keys into both the VEXnet Joystick and Cortex. It does not matter which VEXnet USB
+      Key you insert into the Cortex versus
+      the VEXnet Joystick. Pairing the Cortex
+      and VEXnet Joystick establishes the
+      link; the VEXnet USB Keys simply act as
+      antennas for the link.</p>
+    <p><img src="images/sync 08.jpg" alt="" width="526" height="395" /></p>
+    <p>&nbsp;</p>
+    <p>Power the Cortex and Joystick ON. After a few seconds, the ROBOT and VEXnet LED’s
+      will blink green, indicating that the VEXnet communication link has been established.</p>
+    <p><img src="images/sync 09.jpg" alt="" width="526" height="397" /></p>
+    <p>&nbsp;</p>
+    <p>Your VEXnet Joystick and VEX Cortex can now communicate over the VEXnet USB Keys. Note: You may need to calibrate the joystick values after downloading the VEXnet Joystick firmware; calibration instructions can be found online, <a href="http://www.education.rec.ri.cmu.edu/products/teaching_robotc_cortex/reference/VEXnet_joystick_calibration.pdf" target="_blank">here</a>.  </p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2>Step 7: Connecting the USB-to-Serial Programming Cable</h2>
+  <div class="articles">
+    <p>The VEXnet  communication channel between the VEXnet Joysticks and VEX Cortex can be used to remotely control your robot (once you've loaded a remote control program on the VEX Cortex). If you have the VEX USB-to-Serial Programming cable, you can also use the communication channel to download ROBOTC programs and use the ROBOTC debugger wirelessly! </p>
+    <p>&nbsp;</p>
+    <p>Use the USB-to-Serial Programming Cable to connect a USB port on your computer to the &quot;PROGRAM&quot; port on the VEXnet Joysticks. </p>
+    <p> <img src="images/sync 10.jpg" alt="" width="529" height="397" /></p>
+    <p>&nbsp;</p>
+    <p>Notes: </p>
+    <p>Once this step is complete, you should no longer need Administrative privileges on your computer; you should be able to download Master CPU Firmware, ROBOTC firmware, and ROBOTC programs in a permissions-restricted account. Only future updates to ROBOTC and the drivers will require Administrative privileges. Exception: On some computers, Windows may prompt you to &quot;install new hardware&quot; each time the programming cable is plugged in on a different USB port. To alleviate the issue, connect the updated programming cable on each USB port as an administrator, or dedicate one USB port for the cable.</p>
+  </div>
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <h2>Step 8: Downloading and Running Code<br />
+  </h2>
+  <div class="articles">
+    <p>ROBOTC contains a large library of sample programs to help you get started. These sample programs can be downloaded to your VEX Cortex using the USB A-to-A cable, or using a wireless VEXnet connection.</p>
+    <p>&nbsp;</p>
+    <p>The VEX Cortex Communication Mode controls how ROBOTC downloads 
+      programs to your Cortex, as well as what types of connections your Cortex checks for when
+      it is powered on. Confirm that your VEX Cortex Communication Mode is set to &quot;<strong>VEXnet or USB</strong>&quot;.<br />
+      <img src="3_5_images/Screenshot-2012-01-06_13.28.23.png" alt="" width="443" height="279" /><br />
+      <strong>Option 1: VEXnet or USB</strong><br />
+      With this option selected, ROBOTC will download  programs to your
+      Cortex using a VEXnet or USB connection. In this mode, when the Cortex is powered ON <strong>it
+        will look for a VEXnet or USB connection for up to 15 seconds before running your program</strong>.
+      (The Communication Port &gt; Automatic Selection option in the ROBOTC Preferences should be selected if you plan on
+      switching between VEXnet and USB as your download method.)<br />
+    </p>
+    <p>&nbsp;</p>
+    <p>Option 2: USB Only<br />
+      With this option selected, ROBOTC will download programs to your Cortex
+      using only the USB connection. In this mode, when the Cortex is powered ON it will
+      immediately run your program. This option will NOT work if you are using the VEXnet
+      Joysticks to download to the Cortex, or remotely control it.</p>
+    <p><br />
+      Option 3: Competition (VEXnet)<br />
+      This option disables the ROBOTC debugger, and is not recommended for classroom use.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>To open a sample program, go to File &gt; Open Sample Program.</p>
+    <p><img src="images/program 2.png" alt="" width="244" height="112" /></p>
+    <p>&nbsp;</p>
+    <p>Navigate to the Remote Control folder and open &quot;Dual Joystick Control.c&quot;.</p>
+    <p><img src="images/open_rc.png" alt="" width="675" height="434" /></p>
+    <p>&nbsp;</p>
+    <p>Make sure that your robot is connected to the computer (over USB or VEXnet) and turned ON. Then go to Robot &gt; Compile and Download Program.</p>
+    <p><img src="images/compile.png" alt="" width="313" height="100" /></p>
+    <p>&nbsp;</p>
+    <p>A Download Progress window will appear while the program is downloading to the Cortex.</p>
+    <p><img src="images/robotc_download.png" alt="" width="533" height="139" /></p>
+    <p>&nbsp;</p>
+    <p>The Program Debug window will appear. You can run your program by pressing the &quot;Start&quot; button, or by  turning the robot OFF and back ON.</p>
+    <p><img src="images/robotc_rc.png" alt="" width="801" height="538" /></p>
+    <p>Once you start the program, you should be able to remotely control the both motors by moving the joysticks up and down on the VEXnet Joysticks.    </p>
+</div>
+  <p></p>
+  <p>&nbsp;</p>
+  <hr />
+  <h2><br />
+    Step 9: Getting More Help</h2>
+  <div class="articles">
+    <p>ROBOTC includes a useful Help system. You can launch the help system by going to the <strong>Help </strong>menu and selecting <strong> Open Help</strong>, or by pressing the <strong>F1</strong> key on your keyboard.</p>
+    <p><img src="images/help.png" alt="" width="420" height="260" /></p>
+    <p>&nbsp;</p>
+    <p>The <a href="http://www.education.rec.ri.cmu.edu/products/teaching_robotc_cortex/index.html" target="_blank">VEX Cortex Video Trainer</a> provides many useful video tutorials for learning the VEX Cortex system and ROBOTC Programming. </p>
+    <p>&nbsp;</p>
+    <p>Additional help and support can be found at <a href="http://www.robotc.net/index.php" target="_blank">www.robotc.net</a> or by e-mailing <a href="mailto:support@robotc.net">support@robotc.net</a></p>
+  </div>
+</div></div></div>
+<div style="clear: both;"></div>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -17,8 +17,8 @@ bool endAuton = false;
 task main() {
 
 	while (endAuton == false) {
-		if (vexRT[Btn7U]) {
-			Auton();
+		if (vexRT[Btn7U]) { // Change the button to start your autonomous here
+			Auton(); // Sources from Auton.c
 			endAuton = true;
 		}
 	}

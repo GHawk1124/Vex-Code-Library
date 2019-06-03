@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Getting Started</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style2.css" media="screen" />
+<style type="text/css">
+<!--
+.red {
+	color: #900;
+}
+-->
+</style>
+</head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1>Getting Started with<strong> ROBOT<span class="red">C </span></strong>- Troubleshooting Help</h1>
+</div>
+
+
+<div class="left"> 
+<div class="articles">
+  <div class="articles">
+    <div class="articles">
+      <p>This guide is a reference for  troubleshooting issues that occur when working with ROBOTC and the VEX Cortex.<strong> Note: Administrative privileges are required for some of these steps.</strong></p>
+      <p>&nbsp;</p>
+      <p><a href="Getting Started VEX.htm">&lt;&lt; Back to Main Page</a></p>
+    </div>
+    <p>&nbsp;</p>
+    <hr />
+    <h2><br />
+      Troubleshooting Help by Error Message:</h2>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="418" align="left" valign="top"><p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.22.02.png" alt="" width="411" height="178" /><br />
+        </p>
+          <p>&nbsp; </p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td width="*" align="left" valign="top">If you see this error message, ROBOTC has detected that your Cortex is not turned on, does not have a battery connected, or the battery connected is completely drained. The USB port provides <em>some power</em> to the VEX Cortex, but not enough to turn on motors or retrieve reliable sensor values. Connect a charged battery and turn the Cortex on to correct the issue. </td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.17.21.png" alt="" width="414" height="256" /></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.23.35.png" alt="" width="414" height="230" /></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message.png" alt="" width="414" height="160" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>If you see one of these error messages, ROBOTC was not able to establish a connection with the VEX Cortex. This may have been caused by connecting the VEX Cortex to the computer after it was already turned on, or not allowing Windows enough time to recognize the device. Try unplugging the VEX Cortex from the computer, turning it off, reconnecting it to the computer, waiting a few seconds, then turning the VEX Cortex on. </p>
+          <p>&nbsp;</p>
+          <p>If the problem persists, <a href="#programs">try following the steps in this section of the document</a>.</p></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.15.55.png" alt="" width="398" height="178" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>This error message indicates that ROBOTC was unable to establish a connection to the VEX Cortex, due to it running an older version of the Master CPU Firmware. To correct this issue, go to Robot &gt; Download Firmware and select &quot;Automatically Update VEX Cortex&quot;.</p>
+          <p>&nbsp;</p>
+          <p>If the problem persists, <a href="#master_firmware">try following the steps in this section of the document</a>.</p></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.17.58.png" alt="" width="395" height="217" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>This error message indicates that ROBOTC was unable to establish a connection to the VEX Cortex, due to it being in &quot;bootload mode&quot;. This may have been caused if you manually placed it in bootload mode by pressing the config button, or if the Master CPU firmware has been corrupted. As a first step, you should try disconnecting the Cortex from the computer, turning it off, reconnecting it to the computer, waiting a few seconds, then turning the VEX Cortex on. If the ROBOT and GAME lights on the cortex quickly blink green, this indicates that the Cortex is still in bootload mode and you may need to redownload the Master CPU Firmware. To correct this issue, go to Robot &gt; Download Firmware and select &quot;Automatically Update VEX Cortex&quot;.</p>
+          <p>&nbsp;</p>
+          <p>If the problem persists, <a href="#master_firmware">try following the steps in this section of the document</a>.</p></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.14.22.png" alt="" width="417" height="321" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>If you see this error message, ROBOTC was unable to detect a VEX Cortex or VEXnet Joystick. This may be caused by an incorrect manual setting. Go to View &gt; Select Communication Port, and make sure that &quot;Automatic Selection&quot; or an appropriate communication method is selected. </p>
+          <p>&nbsp;</p>
+          <p>Alternatively, if you're programming wireless over VEXnet, make sure that both the VEX Cortex and VEXnet Joysticks are turned on and successfully paired. </p>
+          <p>&nbsp;</p>
+          <p>If the problem persists, <a href="#not_recognize">try following the steps in this section of the document</a>.</p></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.09.45.png" alt="" width="360" height="152" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>If you see this error message, ROBOTC was unable to detect a VEX Cortex. This may be caused by an incorrect manual setting. Go to View &gt; Select Communication Port, and make sure that &quot;Automatic Selection&quot; or an appropriate communication method is selected. </p>
+          <p>&nbsp;</p>
+          <p>If the problem persists, <a href="#not_recognize">try following the steps in this section of the document</a>.</p></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.16.44.png" alt="" width="390" height="165" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>This error message appears when the Master CPU Firmware fails to finish downloading. <a href="#master_firmware">Follow the steps in this section of the document</a> to correct the issue.</p></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p><img src="cortex_messages/ROBOTC_Message-2011-11-10_13.14.49.png" alt="" width="380" height="145" /></p>
+          <p>&nbsp;</p></td>
+        <td width="10" align="left" valign="top">&nbsp;</td>
+        <td align="left" valign="top"><hr />
+          <p></p>
+          <p>&nbsp;</p>
+          <p>This error message appears when there are errors in your code. <a href="#compile">Follow the steps in this section of the document</a> for help correcting the issue.</p></td>
+      </tr>
+    </table>
+    <hr />
+    <p>&nbsp;</p>
+    <p><a href="Getting Started VEX.htm">&lt;&lt; Back to Main Page</a>
+      <br />
+      <br />
+    </p>
+    <hr />
+    <h2><br />
+      Troubleshooting Help by Topic:
+    </h2>
+    <ul>
+      <li><a href="#not_recognize">Computer will not Recognize the VEX Cortex</a></li>
+      <li><a href="#programs">Not able to Download my ROBOTC program over USB </a></li>
+      <li><a href="#robotc_firmware">Not able to Download ROBOTC Firmware over USB</a></li>
+      <li><a href="#master_firmware">Not able to Download Master CPU Firmware over USB</a></li>
+      <li><a href="#compile">Program will not Compile</a></li>
+      <li><a href="#behavior">Program compiles, but does not behave as desired</a></li>
+      <li><a href="#debugger">Not able to open the ROBOTC Debugger</a></li>
+      <li><a href="#ms_values">Motors and/or Sensors Debug windows not functioning  correctly</a></li>
+      <li><a href="#delay">Program does not immediately run when Cortex is  turned on    </a></li>
+    </ul>
+    <p>&nbsp;</p>
+  </div>
+  <div class="articles">
+    <p><strong><a name="not_recognize" id="not_recognize"></a>Problem: Computer will not Recognize the VEX  Cortex</strong><br />
+      1.  Was the correct startup sequence followed when connecting the Cortex to the  computer?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      </ul>
+    <p>2.  Is the connected battery sufficiently charged?</p>
+    <ul>
+      <li>Swap  in a fully charged battery</li>
+    </ul>
+    <p>3.  Does the Cortex need to be power cycled?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+    </ul>
+    <p>4.  Try another USB port on the computer.</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+    </ul>
+    <p>5. Make sure that the drivers for the VEX Cortex have been successfully installed</p>
+    <ul>
+      <li>The necessary drivers are automatically installed in ROBOTC 3.05 and later, but can be downloaded here if needed: <a href="www.robotc.net/download/cortex">www.robotc.net/download/cortex</a></li>
+      <li>In the Windows Device Manager, a successfully installed Cortex running a 3.x Master Firmware will appear as a &quot;VEX Robotics Comm Port&quot;. A yellow exclamation point indicates that there was an issue with the driver installation<br />
+        <img src="cortex_messages/Device_Manager-2011-11-10_13.43.25.png" alt="" width="650" height="479" /></li>
+      <li>A successfully installed Cortex running a 2.x Master Firmware, or any Cortex in &quot;bootload mode&quot; will appear as a &quot;HID-compliant device&quot;. A yellow exclamation point indicates that there was an issue with the driver installation.<br />
+        <img src="cortex_messages/Device_Manager-2011-11-10_13.43.59.png" alt="" width="649" height="511" /></li>
+      </ul>
+<p>&nbsp;</p>
+<ul>
+  <li>A VEX Cortex running the 3.x Master Firmware that appears as a &quot;CRC RC Controller&quot; indicates a computer that does not have the VEX Cortex driver installed. <br />
+    <img src="cortex_messages/Device_Manager-2011-11-10_13.42.33.png" alt="" width="651" height="479" /></li>
+  <li>If there are any yellow exclamation points near the items in your Device Manager, try reinstalling the VEX Cortex Driver. Make sure you have administrative privileges for this process.</li>
+  </ul>
+<p>6.  Make sure that your computer allows for “new hardware” to be connected.  Locked down computers may prohibit new hardware such as the VEX  Cortex from being connected.</p>
+    <ul>
+      <li>Contact  your Tech Support for additional privileges</li>
+    </ul>
+    <p>7.  Some  software causes a conflict with the Cortex. </p>
+    <ul>
+      <li>If you use SMART Board software, the SMART Virtual  TabletPC device causes a conflict. It can be disabled in the Device Manager:<br />
+        <img src="3_5_images/SS-2011-05-06_09.17.41.png" alt="" width="582" height="430" /></li>
+      <li>In security software packages, such as Novell, ROBOTC and the VEX Cortex may need to be added to the list of approved software/devices.</li>
+      </ul>
+    <p>&nbsp;</p>
+    <p><strong><a name="programs" id="programs"></a>Problem:  Not  able to Download my ROBOTC program over USB</strong><br />
+      1.  Was the correct startup sequence followed when connecting the Cortex to the  computer?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>2.  Does the program compile?</p>
+    <ul>
+      <li>Fix  any errors (red x's) </li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>3.  Is the correct Platform Type and Communication Port selected?</p>
+    <ul>
+      <li>Verify  that the correct platform type is selected under Robot &gt; Platform Type</li>
+      <li>Go to View &gt; Select Communication Port, and ensure that &quot;Automatic Selection&quot; or another appropriate choice is selected.</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>4.  Is the connected battery sufficiently charged?</p>
+    <ul>
+      <li>Swap  in a fully charged battery</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>5.  Does the Cortex need to be power cycled?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>6.  Have the Master CPU and ROBOTC Firmware been downloaded successfully to the  Cortex? </p>
+    <ul>
+      <li>Do  they need to be re-downloaded?</li>
+      <ul>
+        <li>Download  the Master CPU Firmware      </li>
+        <li>Download  the ROBOTC Firmware</li>
+        <li>Power  Cycle the Cortex</li>
+        <li>Retry  downloading the program</li>
+      </ul>
+    </ul>
+    <p>7.  Try another USB port on the computer.</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>8.  Restart ROBOTC.</p>
+    <ul>
+      <li>Close  ROBOTC</li>
+      <li>Open  ROBOTC</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>9.  Restart the computer.</p>
+    <ul>
+      <li>Restart  your computer</li>
+      <li>Open  ROBOTC</li>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>10.  Additional Steps</p>
+    <ul>
+      <li>Try  using the same program on another computer, with the same Cortex.</li>
+      <li>Try  using the same program on the same computer, with a different Cortex.</li>
+      <li>Try  using a different USB A-to-A cable.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong><a name="robotc_firmware" id="robotc_firmware"></a>Problem:  Not able to Download ROBOTC Firmware over USB</strong><br />
+      1.  Was the correct startup sequence followed when connecting the Cortex to the  computer?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+    </ul>
+    <p>2.  Has the Master CPU Firmware been successfully  downloaded?</p>
+    <ul>
+      <li>Download  the Master CPU Firmware      </li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+    </ul>
+    <p>3.  Is the correct Platform Type and Communication Port selected?</p>
+    <ul>
+      <li>Verify  that the correct platform type is selected under Robot &gt; Platform Type</li>
+      <li>Go to View &gt; Select Communication Port, and ensure that &quot;Automatic Selection&quot; or another appropriate choice is selected.</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+      </ul>
+<p>4.  Is the connected battery sufficiently charged?</p>
+    <ul>
+      <li>Swap  in a fully charged battery</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+    </ul>
+    <p>5.  Does the Cortex need to be power cycled?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+    </ul>
+    <p>6.  Try another USB port on the computer.</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+      </ul>
+    <p>7. Make sure that the drivers for the VEX Cortex have been successfully installed</p>
+    <ul>
+      <li>The necessary drivers are automatically installed in ROBOTC 3.05 and later, but can be downloaded here if needed: <a href="www.robotc.net/download/cortex">www.robotc.net/download/cortex</a></li>
+      <li>Follow along with the steps in this <a href="#not_recognize">part of the document.</a></li>
+      </ul>
+<p>8.  Restart ROBOTC.</p>
+    <ul>
+      <li>Close  ROBOTC</li>
+      <li>Open  ROBOTC</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+    </ul>
+    <p>9.  Restart the computer.</p>
+    <ul>
+      <li>Restart  your computer</li>
+      <li>Open  ROBOTC</li>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+    </ul>
+    <p>10.  Additional Steps</p>
+    <ul>
+      <li>Try  downloading the ROBOTC Firmware using another computer, with the same Cortex.</li>
+      <li>Try  downloading the ROBOTC Firmware using the same computer, with a different  Cortex.</li>
+      <li>Try  using a different USB A-to-A cable.</li>
+    </ul>
+    <p>11.  Slow down the firmware download by inserting delays.</p>
+    <ul>
+      <li>Go  to Window &gt; Menu level &gt; and select Super User</li>
+      <li>Go  to View &gt; Preferences &gt; Detailed Preferences...</li>
+      <li>Go  to the VEX Cortex Tab</li>
+      <li>Check the box next to &quot;Use Message Tracing Kluge to Fix Firmware Downloading H/W&quot;</li>
+      <li>Add  a 5 millisecond delay</li>
+      <li>Retry  downloading the ROBOTC Firmware</li>
+      <li>Continue  to add short delays up until 100 milliseconds. </li>
+    </ul>
+    <p><strong>&nbsp;</strong></p>
+    <p><strong><a name="master_firmware" id="master_firmware"></a>Problem:  Not able to Download Master CPU Firmware over  USB</strong><br />
+      1.  Was the correct startup sequence followed when connecting the Cortex to the  computer?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+    </ul>
+    <p>2. Is the correct Platform Type and Communication Port selected?</p>
+    <ul>
+      <li>Verify  that the correct platform type is selected under Robot &gt; Platform Type</li>
+      <li>Go to View &gt; Select Communication Port, and ensure that &quot;Automatic Selection&quot; or another appropriate choice is selected.</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+      </ul>
+<p>3.  Is the connected battery sufficiently charged?</p>
+    <ul>
+      <li>Swap  in a fully charged battery</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+    </ul>
+    <p>4.  Does the Cortex need to be power cycled?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+    </ul>
+    <p>5.  Try another USB port on the computer.</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+      </ul>
+    <p>6. Make sure that the drivers for the VEX Cortex have been successfully installed</p>
+    <ul>
+      <li>The necessary drivers are automatically installed in ROBOTC 3.05 and later, but can be downloaded here if needed: <a href="www.robotc.net/download/cortex">www.robotc.net/download/cortex</a></li>
+      <li>Follow along with the steps in this <a href="#not_recognize">part of the document.</a></li>
+      </ul>
+<p>7.  Restart ROBOTC.</p>
+    <ul>
+      <li>Close  ROBOTC</li>
+      <li>Open  ROBOTC</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+    </ul>
+    <p>8.  Restart the computer.</p>
+    <ul>
+      <li>Restart  your computer</li>
+      <li>Open  ROBOTC</li>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+    </ul>
+    <p>9.  Additional Steps</p>
+    <ul>
+      <li>Try  downloading the Master CPU Firmware using another computer, with the same  Cortex.</li>
+      <li>Try  downloading the Master CPU Firmware using the same computer, with a different  Cortex.</li>
+      <li>Try  using a different USB A-to-A cable.</li>
+    </ul>
+    <p>10.  Slow down the firmware download by inserting delays.</p>
+    <ul>
+      <li>Go  to Window &gt; Menu level &gt; and select Super User</li>
+      <li>Go  to View &gt; Preferences &gt; Detailed Preferences...</li>
+      <li>Go  to the VEX Cortex Tab</li>
+      <li>The box next to &quot;Delay Between HID Write Cycles (while downloading Master firmware)&quot; allows you to specify a  number of 
+        milliseconds to insert as delays. </li>
+      <li>Add  a 5 millisecond delay</li>
+      <li>Retry  downloading the Master CPU Firmware</li>
+      <li>Continue  to add short delays up until 100 milliseconds. </li>
+      <li>Retry  downloading the Master CPU firmware until success.</li>
+    </ul>
+    <p>11.  Try the download using the VEXnet Firmware Upgrade Utility, supplied by VEX  Robotics.</p>
+    <ul>
+      <li>Download  the VEXnet Firmware Upgrade Utility, available here: <a href="http://www.vexforum.com/wiki/index.php/Software_Downloads" target="_blank">http://www.vexforum.com/wiki/index.php/Software_Downloads</a></li>
+      <li>Unzip  the utility and instructions</li>
+      <li>Follow  the instructions included with the utility to update the firmware</li>
+      </ul>
+    <p>&nbsp;</p>
+    <p><strong><a name="compile" id="compile"></a>Problem:  Program will not Compile</strong><br />
+      1.  If you're using Natural Language functions, make sure you're in the Natural  Language platform type.</p>
+    <ul>
+      <li>Go  to Robot &gt; Platform Type</li>
+      <li>Select  the Natural Language option</li>
+      <li>Go  to Robot &gt; Compile Program to recompile your code</li>
+    </ul>
+    <p>2.  Is the correct Platform Type Selected?</p>
+    <ul>
+      <li>Verify  that the correct platform type is selected under Robot &gt; Platform Type</li>
+      <li>Retry  downloading the program</li>
+    </ul>
+    <p>3.  Check your code for mistakes.</p>
+    <ul>
+      <li>Are  you missing any curly braces?</li>
+      <li>Are  you missing any semicolons?</li>
+      <li>Are  any of your commands or variables improperly capitalized?</li>
+      <li>Do  any of your commands or variables contain typos?</li>
+      <li><a href="http://www.education.rec.ri.cmu.edu/products/teaching_robotc_cortex/fundamentals/naturallanguage/hp_error_messages.pdf" target="_blank">Read  this document</a> for more detail around error messages.</li>
+      <li>Go  to Robot &gt; Compile Program to recompile your code</li>
+    </ul>
+    <p>4.  Check the ROBOTC Errors window for hints.</p>
+    <ul>
+      <li>The  ROBOTC Errors window (usually located at the bottom of the screen) will display</li>
+      <li>a  list of known errors, what line they're on, and some information about the  error. </li>
+      <li>Double-click  errors in the ROBOTC Errors window to highlight the affected line in your </li>
+      <li>program.</li>
+      <li>Correct  errors (keep in mind yellow x's are only warnings, and white x's are only  information, </li>
+      <li>not  errors).</li>
+      <li>Go  to Robot &gt; Compile Program to recompile your code.</li>
+    </ul>
+    <p>5.  Compare your code to programs you know work and compile.</p>
+    <ul>
+      <li>Compare  your code t similar ROBOTC Sample Programs (File &gt; Open Sample Program)</li>
+    </ul>
+    <p><strong>&nbsp;</strong></p>
+    <p><strong><a name="behavior" id="behavior"></a>Problem:  Program compiles, but does not behave as  desired</strong><br />
+      1.  Compare your code to programs you know work and compile.</p>
+    <ul>
+      <li>Compare  your code t similar ROBOTC Sample Programs (File &gt; Open Sample Program)</li>
+    </ul>
+    <p>2.  Think &quot;like the robot&quot;. The robot does exactly what you tell it to  do. Nothing more and nothing less. </p>
+    <ul>
+      <li>Is  there an important step you're forgetting to tell the robot?</li>
+      <li>Go  back to your pseudocode plan. Does the sequence of steps make sense for the  robot?</li>
+    </ul>
+    <p>3.  Use the ROBOTC Program Debug window to &quot;Step&quot; through your code  line-by-line.</p>
+    <ul>
+      <li>Download  the program to the robot.</li>
+      <li>When  the Program Debug window appears, repeatedly press the &quot;Step&quot; button  to run the program line-by-line.</li>
+      <li>Observe  the robot's behavior. How does it compare to the desired behavior?</li>
+      <li>Try  to identify where the robot's behavior differs from the desired behavior.</li>
+    </ul>
+    <p>4.  Insert visual &quot;flags&quot; in your program.</p>
+    <ul>
+      <li>Insert  optional wait statements or turn on different LED's at different parts of the  program.</li>
+      <li>When  the robot reaches one of the wait statements or LED's, and behaved correctly,  you know that the program was correct up until that point.</li>
+      <li>Continue  to insert and observe these optional flags until you identify the problem.</li>
+      </ul>
+    <p>5. Watch some of the free tutorials in the <a href="http://www.education.rec.ri.cmu.edu/products/teaching_robotc_cortex/index.html" target="_blank">VEX Cortex Video Trainer</a> related to your project. </p>
+    <ul>
+      <li>Pay special attention to the &quot;Fundamentals &gt; Introduction to Programming&quot; section.</li>
+      </ul>
+<p>&nbsp;</p>
+    <p><strong><a name="debugger" id="debugger"></a>Problem:  Not able to open the ROBOTC Debugger</strong><br />
+      1.  Was the correct startup sequence followed when connecting the Cortex to the  computer?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Retry  downloading the program to open the debugger</li>
+    </ul>
+    <p>2.  Has the program been downloaded to the Cortex?</p>
+    <ul>
+      <li>Download  the program to open the debugger</li>
+    </ul>
+    <p>3.  Have the Master CPU and ROBOTC Firmware been downloaded successfully to the  Cortex?</p>
+    <ul>
+      <li>Do  they need to be re-downloaded?</li>
+      <li>Download  the Master CPU Firmware</li>
+      <li>Download  the ROBOTC Firmware</li>
+      <li>Power  Cycle the Cortex</li>
+      <li>Retry  downloading the program to open the debugger<br />
+      </li>
+    </ul>
+    <p>4.  Check the VEX Cortex Download Method.</p>
+    <ul>
+      <li>Verify  that the Robot &gt; VEX Cortex Communication Mode is set to &quot;  VEXnet or USB&quot; or &quot;USB Only&quot;</li>
+      <li>If  it was set for Competition:</li>
+      <ul>
+        <li>Download the program</li>
+        <li>Turn  Cortex OFF</li>
+        <li>Disconnect the Cortex  from the computer</li>
+        <li>Reconnect the Cortex  to the computer over USB</li>
+        <li>Turn the Cortex On</li>
+        <li>Retry downloading the  program to open the debugger</li>
+      </ul>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong><a name="ms_values" id="ms_values"></a>Problem:  Motors and/or Sensors Debug windows not  functioning correctly</strong><br />
+      1.  Is the Cortex turned on and connected to a charged battery?</p>
+    <ul>
+      <li>Swap  in a fully charged battery</li>
+      <li>Turn  the Cortex on</li>
+      <li>Observe  the debug window data</li>
+    </ul>
+    <p>2.  Has a program that correctly configures the sensors been downloaded to the  robot?</p>
+    <ul>
+      <li>Download  a program that correctly configures the sensors on the robot.</li>
+      <li>Run  the program</li>
+      <li>Stop  the program</li>
+      <li>Observe  the sensor data</li>
+    </ul>
+    <p>3.  Is the Program Debug window set to provide &quot;Continuous&quot; updates?</p>
+    <ul>
+      <li>Download  the program to the robot</li>
+      <li>Under  the &quot;Refresh Rate&quot; section, verify that a button is not labeled  &quot;Continuous&quot;</li>
+      <li>If  a button is labeled &quot;Continuous&quot;, press it to receive continuous updates</li>
+      <li>Observe  the sensor data</li>
+    </ul>
+    <p>4.  Have the Master CPU and ROBOTC Firmware been downloaded successfully to the  Cortex? </p>
+    <ul>
+      <li>Do  they need to be re-downloaded?</li>
+      <ul>
+        <li>Download  the Master CPU Firmware      </li>
+        <li>Download  the ROBOTC Firmware</li>
+        <li>Power  Cycle the Cortex</li>
+        <li>Re-download  the program</li>
+        <li>Observe  the sensor data</li>
+      </ul>
+    </ul>
+    <p>5.  Does the Cortex need to be power cycled?</p>
+    <ul>
+      <li>Start  with the Cortex Turned OFF</li>
+      <li>Connect  the Cortex to the computer over USB</li>
+      <li>Turn  the Cortex On</li>
+      <li>Re-download  the program</li>
+      <li>Observe  the sensor data</li>
+    </ul>
+    <p>6.  Restart ROBOTC.</p>
+    <ul>
+      <li>Close  ROBOTC</li>
+      <li>Open  ROBOTC</li>
+      <li>Re-download  the program</li>
+      <li>Observe  the sensor data</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong><a name="delay" id="delay"></a>Problem:  Program does not immediately run when Cortex  is turned on</strong><br />
+      1.  Check the VEX Cortex Communication Mode</p>
+    <ul>
+      <li>Go  to Robot &gt; VEX Cortex Communication Mode</li>
+      <li>Select  &quot;USB Only&quot; to have the program start automatically</li>
+      <li>Download  the program</li>
+      <li>Turn  Cortex OFF</li>
+      <li>Disconnect  the Cortex from the computer</li>
+      <li>Turn  the Cortex On</li>
+      <li>Program  should start automatically</li>
+      </ul>
+    <p>2. Check the logic in your code</p>
+    <ul>
+      <li>Do you have any long delays at the beginning of your program?</li>
+      <li>Do you have any conditional logic (while loops, for loops, ect) that's not being met?</li>
+    </ul>
+    <p><br />
+    </p>
+  </div><div class="articles">
+  </div>
+  <div class="articles">
+    <p>&nbsp;</p>
+    <hr />
+    <br />
+    <a href="Getting Started VEX.htm">&lt;&lt; Back to Main Page<br />
+      </a><br />
+    <hr />
+    <h2><br />
+      Additional Troubleshooting Help:    
+    </h2>
+    <ul>
+      <li>The <a href="http://www.education.rec.ri.cmu.edu/products/teaching_robotc_cortex/index.html" target="_blank">VEX Cortex Video Trainer</a> provides many useful video tutorials for learning the VEX Cortex system and ROBOTC Programming. </li>
+    <li>The <a href="http://robotc.net/forums/" target="_blank">R</a><a href="http://robotc.net/forums/" target="_blank">OBOTC.net Forums</a> contain a large, active community that offers thoughtful advice.</li>
+    <li>A Cortex/VEXnet Joystick <a href="http://content.vexrobotics.com/docs/Cortex_Joystick_LED_Codes_052010.pdf" target="_blank">LED lookup guide can be found here</a>.</li>
+    <li>Support for <a href="http://www.robotc.net/support/building-license/index.php" target="_blank">installing a building license can be found here</a>.</li>
+    <li>Additional help and support can be found at <a href="http://www.robotc.net/index.php" target="_blank">www.robotc.net</a> or by e-mailing <a href="mailto:support@robotc.net">support@robotc.net</a></li>
+    </ul>
+  <p>&nbsp;</p>
+  </div>
+  <p><a href="Getting Started VEX.htm">&lt;&lt; Back to Main Page</a></p>
+</div>
+<div class="articles"> </div>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>
